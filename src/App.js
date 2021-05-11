@@ -29,10 +29,17 @@ function App() {
             <a className="nav-item nav-link" href="#">
               Contact
             </a>
-           
           </div>
         </div>
       </nav>
+      <div className="body">
+        <p>
+          Hello.
+          <br /> I'm Jon.
+          <br /> I like to build things...
+          <br /> Web Pages. Apps. Relationships.
+        </p>
+      </div>
     </div>
   );
 }
