@@ -2,11 +2,24 @@
   text-align: center;
 }
 
+.navbar {
+font-weight: 350;
+}
+
 body {
   background-color: rgb(32, 190, 156);
 }
 
 .body {
-  margin-top: 5rem;
+  margin-top: 8rem;
   font-size: 2rem;
+  font-weight: 600;
+  /* text-shadow: 3px 3px 3px grey; */
 }
+/*
+.main {
+  text-shadow: 5px 5px 5px grey ;
+} */
+/* .sav-nav {
+  background-color: rgb(245, 229, 82);
+} */
