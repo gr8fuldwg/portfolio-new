@@ -16,10 +16,14 @@ body {
   font-weight: 600;
   /* text-shadow: 3px 3px 3px grey; */
 }
-/*
-.main {
-  text-shadow: 5px 5px 5px grey ;
-} */
-/* .sav-nav {
-  background-color: rgb(245, 229, 82);
-} */
+
+#quote {
+  font-family: sans-serif;
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+

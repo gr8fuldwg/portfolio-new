@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import Card from "react-bootstrap/Card";
 import "./App.css";
 import axios from "axios";
 
 // API Variable
-const QUOTE_API = "https://quote-garden.herokuapp.com/api/v3/quotes/random";
+const QUOTE_API = "https://api.quotable.io/random";
 
 class App extends Component {
   constructor(props) {
@@ -11,32 +12,22 @@ class App extends Component {
     this.state = {
       error: null,
     };
-
-    this.quote = this.quote.bind(this);
   }
 
-  quote() {
-    axios
+  async componentWillMount() {
+    await axios
       .get(QUOTE_API)
       .then((response) => {
-        const { quoteText } = response.data.data[0].quoteText;
-        const { quoteAuthor } = response.data.data[0].quoteAuthor;
-        console.log("yay");
-        console.log("response.data.data[0].quoteText");
+        console.log(response.data.content);
+        console.log("Now im REALLY in the API!");
         this.setState({
-          quoteText: quoteText,
-          quoteAuthor: quoteAuthor,
-          hyphen: " -",
-          error: null,
+          content: response.data.content,
+          author: response.data.author,
+          hyphen: "- ",
         });
-        console.log("HIIIIII im in the API");
       })
-
-      .catch((err) => {
-        this.setState({
-          error: err,
-        });
-        console.log("error");
+      .catch((error) => {
+        console.log(error);
       });
   }
 
@@ -81,7 +72,13 @@ class App extends Component {
             <br /> Web Pages. Apps. Relationships.
           </p>
         </div>
-        {/* <div>"{this.state.quoteText}"</div> */}
+        <div id="quote">
+          <h3>"{this.state.content}"</h3>
+          <h3 className="font-italic">
+            {this.state.author}
+            {this.state.hyphen}
+          </h3>
+        </div>
       </div>
     );
   }
