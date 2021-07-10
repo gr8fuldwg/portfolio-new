@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
+import { Link } from "react-scroll";
 
-// HTML CSS JSResult Skip Results Iframe
-// EDIT ON
+// TYPEWRITER EFFECT
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -63,8 +63,6 @@ window.onload = function () {
   document.body.appendChild(css);
 };
 
-// Resources1× 0.5× 0.25×Rerun
-
 // API Variable
 const QUOTE_API = "https://api.quotable.io/random";
 
@@ -81,7 +79,6 @@ class App extends Component {
       .get(QUOTE_API)
       .then((response) => {
         console.log(response.data.content);
-        console.log("Now im REALLY in the API!");
         this.setState({
           content: response.data.content,
           author: response.data.author,
@@ -96,7 +93,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-black">
           <a className="navbar-brand" href="#">
             Personal Portfolio
           </a>
@@ -113,25 +110,35 @@ class App extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="nav-item nav-link active" href="#">
-                About <span className="sr-only">(current)</span>
-              </a>
-              <a className="nav-item nav-link" href="#">
-                Projects
-              </a>
-              <a className="nav-item nav-link" href="#">
-                Contact
-              </a>
+              <Link to="about" spy={true} auto={true}>
+                <a className="nav-item nav-link active" href="#">
+                  About Me<span className="sr-only">(current)</span>
+                </a>
+              </Link>
+              <Link to="projects" spy={true} auto={true}>
+                <a className="nav-item nav-link" href="#">
+                  Projects
+                </a>
+              </Link>
+              <Link to="contact" spy={true} auto={true}>
+                <a className="nav-item nav-link" href="#">
+                  Contact
+                </a>
+              </Link>
             </div>
           </div>
         </nav>
+
         <div className="body">
+          {/* <div className="cube">
+            <div claassName="cube" ref={(ref) => (this.mount = ref)} />
+          </div> */}
           <h2 className="greet">
-            Hi, I'm Jon  : ) <br />
-            I build things.
-            
-            {/* CSS Animation TypeWriterEFFECT */}
-            <br />
+            <section>
+              Hi, I'm Jon : ) <br />I build things.
+              {/* CSS Animation TypeWriterEFFECT */}
+              <br />
+            </section>
             <h2
               className="greet"
               href=""
@@ -143,16 +150,6 @@ class App extends Component {
             </h2>
             <br />
           </h2>
-
-          {/* <div className="body"> */}
-          {/* <p id="greet">
-            Hi, I'm Jon Josephson.
-            <div id="pitch">
-              <br /> I build things...
-              <br /> Web Pages. Apps. Relationships.
-            </div>
-          </p> */}
-          {/* </div> */}
         </div>
 
         <div id="quote">
@@ -162,6 +159,43 @@ class App extends Component {
             {this.state.author}
           </h3>
         </div>
+
+        <div id="about">
+          <h4>About Me</h4>
+          <p className="about">
+            I'm a freelance web developer and programmer based out of
+            Gainesville, FL, USA. Be it my own or collaborative, I make
+            non-tangable concepts a reality. Using my creative gears, I love
+            building, modifying and assembling projects of all kinds...whether
+            it's music, art or technology.
+          </p>{" "}
+          <br />
+          <p className="about">
+            Contact me so we can discuss your ideas and make your digital dreams
+            come to life!
+          </p>
+          <br />
+        </div>
+        <h4>My Tech Toolbox</h4>
+        <section id="tools">
+          <ul>
+            <li className="tool">HTML5</li>
+            <li className="tool">CSS3</li>
+            <li className="tool">JS</li>
+            <li className="tool">ReactJS</li>
+            <li className="tool">Git</li>
+            <li className="tool">Bootsstrap</li>
+            <li className="tool">jQuery</li>
+            <li className="tool">Express</li>
+          </ul>
+        </section>
+        <section id="projects">
+          <h4>Projects</h4>
+          <div className="p1">Project 1</div>
+          <div className="p1">Project 2</div>
+          <div className="p1">Project 3</div>
+          <div className="p1">Project 4</div>
+        </section>
       </div>
     );
   }
