@@ -133,7 +133,6 @@ class App extends Component {
             </div>
           </div>
         </nav>
-
         <div className="body">
           {/* <div className="cube">
             <div claassName="cube" ref={(ref) => (this.mount = ref)} />
@@ -156,7 +155,6 @@ class App extends Component {
             <br />
           </h2>
         </div>
-
         <div id="quote">
           <h3>"{this.state.content}"</h3>
           <h3 className="font-italic">
@@ -164,9 +162,11 @@ class App extends Component {
             {this.state.author}
           </h3>
         </div>
-
         <div id="about">
           <h4>About Me</h4>
+          _________
+          <br />
+          <br />
           <p className="about">
             I'm a freelance web developer and programmer based out of
             Gainesville, FL, USA. Be it my own or collaborative, I make
@@ -182,6 +182,9 @@ class App extends Component {
           <br />
         </div>
         <h4>My Tech Toolbox</h4>
+        _________
+        <br />
+        <br />
         <section id="tools">
           <ul>
             <li className="tool">HTML5</li>
@@ -197,6 +200,9 @@ class App extends Component {
         </section>
         <section id="projects">
           <h4>Projects</h4>
+          _________
+          <br />
+          <br />
           <div className="p1">Project 1</div>
           <div className="p1">Project 2</div>
           <div className="p1">Project 3</div>
@@ -204,6 +210,8 @@ class App extends Component {
         </section>
         <section id="contact">
           <h4>Contact</h4>
+          _________ <br />
+          <br />
           <p>
             email:
             <a href="mailto:jonjosephson1@gmail.com">
