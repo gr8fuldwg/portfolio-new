@@ -93,7 +93,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-black">
+        <nav className="fixed-top navbar navbar-expand-lg navbar-dark bg-black">
           <a className="navbar-brand" href="#">
             Personal Portfolio
           </a>
@@ -111,7 +111,12 @@ class App extends Component {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <Link to="about" spy={true} auto={true}>
-                <a className="nav-item nav-link active" href="#">
+                <a
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  className="nav-item nav-link active"
+                  href="#"
+                >
                   About Me<span className="sr-only">(current)</span>
                 </a>
               </Link>
@@ -184,9 +189,10 @@ class App extends Component {
             <li className="tool">JS</li>
             <li className="tool">ReactJS</li>
             <li className="tool">Git</li>
-            <li className="tool">Bootsstrap</li>
+            <li className="tool">Bootstrap</li>
             <li className="tool">jQuery</li>
             <li className="tool">Express</li>
+            <li className="tool">NPM</li>
           </ul>
         </section>
         <section id="projects">
@@ -195,6 +201,16 @@ class App extends Component {
           <div className="p1">Project 2</div>
           <div className="p1">Project 3</div>
           <div className="p1">Project 4</div>
+        </section>
+        <section id="contact">
+          <h4>Contact</h4>
+          <p>
+            email:
+            <a href="mailto:jonjosephson1@gmail.com">
+              {" "}
+              jonjosephson1@gmail.com
+            </a>
+          </p>
         </section>
       </div>
     );

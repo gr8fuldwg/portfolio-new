@@ -1,15 +1,16 @@
 .App {
+  height: 100%;
+  width: 100%;
   text-align: center;
   background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
   font-weight: 500;
-  /* color: white; */
+  background-attachment: fixed;
 }
 
 .navbar {
   font-weight: 350;
   background-color: black ;
-  position: sticky;
-}
+ }
 
 .white {
   color: rgb(126, 123, 123);
@@ -28,7 +29,7 @@ body {
 }
 
 .body {
-  margin-top: 4rem;
+  padding: 4rem;
   font-size: 2rem;
   font-weight: 300;
   text-shadow: gray 1px 5px 10px;
@@ -117,4 +118,9 @@ body,
 .p1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+#contact {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
