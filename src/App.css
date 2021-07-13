@@ -102,6 +102,14 @@ body,
   font-size: 1.25rem;
 }
 
+.pt5 {
+  padding-top: 5rem;
+}
+
+.pt6 {
+  padding-top: 6rem;
+}
+
 #tools {
   padding-right: 2rem;
   text-decoration: none;

@@ -181,7 +181,7 @@ class App extends Component {
           </p>
           <br />
         </div>
-        <h4>My Tech Toolbox</h4>
+        <h4 className="pt6">My Tech Toolbox</h4>
         _________
         <br />
         <br />
@@ -199,7 +199,7 @@ class App extends Component {
           </ul>
         </section>
         <section id="projects">
-          <h4>Projects</h4>
+          <h4 className="pt5">Projects</h4>
           _________
           <br />
           <br />
@@ -209,7 +209,7 @@ class App extends Component {
           <div className="p1">Project 4</div>
         </section>
         <section id="contact">
-          <h4>Contact</h4>
+          <h4 className="pt-5">Contact</h4>
           _________ <br />
           <br />
           <p>
@@ -218,6 +218,9 @@ class App extends Component {
               {" "}
               jonjosephson1@gmail.com
             </a>
+            <br /><br />
+            cell:<a href="tel:+1-352-219-3194"> 352-219-3194</a>
+            
           </p>
         </section>
       </div>
