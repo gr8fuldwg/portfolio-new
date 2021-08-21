@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import axios from "axios";
 import { Link } from "react-scroll";
+import Hamburger from "./components/hamburger.js";
 
 // TYPEWRITER EFFECT
 var TxtType = function (el, toRotate, period) {
@@ -97,6 +98,7 @@ class App extends Component {
           <a className="navbar-brand" href="#">
             Personal Portfolio
           </a>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -106,7 +108,7 @@ class App extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <Hamburger id="menu-toggle" />
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
@@ -122,7 +124,7 @@ class App extends Component {
               </Link>
               <Link to="projects" spy={true} auto={true}>
                 <a className="nav-item nav-link" href="#">
-                  Projects
+                  Portfolio
                 </a>
               </Link>
               <Link to="contact" spy={true} auto={true}>
@@ -134,9 +136,6 @@ class App extends Component {
           </div>
         </nav>
         <div className="body">
-          {/* <div className="cube">
-            <div claassName="cube" ref={(ref) => (this.mount = ref)} />
-          </div> */}
           <h2 className="greet">
             <section>
               Hi, I'm Jon : ) <br />I build things.
@@ -155,6 +154,14 @@ class App extends Component {
             <br />
           </h2>
         </div>
+        {/* scroll down button */}
+        <section id="scroll" className="demo d-flex">
+          <a href="#section08">
+            <span></span>
+            <span></span>
+            <span></span>Scroll
+          </a>
+        </section>
         <div id="quote">
           <h3>"{this.state.content}"</h3>
           <h3 className="font-italic">
@@ -181,7 +188,7 @@ class App extends Component {
           </p>
           <br />
         </div>
-        <h4 className="pt6">My Tech Toolbox</h4>
+        <h4 className="pt5">My Tech Toolbox</h4>
         _________
         <br />
         <br />
@@ -212,16 +219,21 @@ class App extends Component {
           <h4 className="pt-5">Contact</h4>
           _________ <br />
           <br />
-          <p>
+          <h5>
             email:
             <a href="mailto:jonjosephson1@gmail.com">
               {" "}
               jonjosephson1@gmail.com
             </a>
-            <br /><br />
-            cell:<a href="tel:+1-352-219-3194"> 352-219-3194</a>
-            
-          </p>
+            <br />
+            <br />
+            call:
+            <a href="tel:+1-352-219-3194"> 352-219-3194</a>
+            <br />
+            <br />
+            text:
+            <a href="sms:+1-352-219-3194"> New SMS Message</a>
+          </h5>
         </section>
       </div>
     );
