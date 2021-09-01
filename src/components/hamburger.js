@@ -12,13 +12,13 @@ class Hamburger extends Component {
       <div>
         <div id="menu-toggle" className="clickone">
           <div id="hamburger" className="clickone">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className="span"></span>
+            <span className="span"></span>
+            <span className="span"></span>
           </div>
           <div id="cross">
-            <span></span>
-            <span></span>
+            <span className="span"></span>
+            <span className="span"></span>
           </div>
         </div>
       </div>

@@ -196,6 +196,7 @@ class App extends Component {
           <ul>
             <li className="tool">HTML5</li>
             <li className="tool">CSS3</li>
+            <li className="tool">SASS</li>
             <li className="tool">JS</li>
             <li className="tool">ReactJS</li>
             <li className="tool">Git</li>
